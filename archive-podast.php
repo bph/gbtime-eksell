@@ -3,6 +3,7 @@
 <main id="site-content" role="main">
 
 	<div class="site-content-inner">
+		<p><strong>me is archive-podcast</strong></p>
 
 		<?php
 
@@ -40,17 +41,9 @@
 							endif;
 
 							if ( $archive_title ) :
-
-								// If we're outputting the home text or the Jetpack Portfolio archive text (in the latter case, only when a text is set), output the title in a div to enable multiple paragraphs.
-								if ( ( is_home() && ! is_paged() ) || ( is_post_type_archive( 'jetpack-portfolio' ) && ! is_paged() && get_theme_mod( 'eksell_jetpack_portfolio_archive_text', '' ) ) ) : 
-									?>
-									<div class="archive-title has-paragraphs contain-margins i-a a-fade-up"><?php echo wpautop( $archive_title ); ?></div>
-									<?php
-								else : 
-									?>
-									<h1 class="archive-title i-a a-fade-up"><?php echo $archive_title; ?></h1>
-									<?php
-								endif;
+								?>
+									<h1 class="archive-title i-a a-fade-up"><?php echo $archive_title; ?> title </h1>
+								<?php 	
 							endif;
 							
 							if ( $use_header_grid ) : ?>
@@ -64,7 +57,7 @@
 							endif; 
 							if ( $archive_description ) : 
 								?>
-								<div class="archive-description mw-small contain-margins i-a a-fade-up a-del-100"><?php echo wpautop( $archive_description ); ?></div>
+								<div class="archive-description mw-small contain-margins i-a a-fade-up a-del-100"><?php echo wpautop( $archive_description ); ?> (description)</div>
 								<?php 
 							endif;
 					
