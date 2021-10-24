@@ -3,7 +3,7 @@
 <main id="site-content" role="main">
 
 	<div class="site-content-inner">
-		<p><strong>me is archive-podcast</strong></p>
+
 
 		<?php
 
@@ -11,6 +11,30 @@
 		$archive_title 			= get_the_archive_title();
 		$archive_description 	= get_the_archive_description( '<div>', '</div>' );
 
+		$image = get_option( 'ss_podcasting_data_image', '' );
+		$title = get_option( 'ss_podcasting_data_title', '' );
+		$description = get_option( 'ss_podcasting_data_description', '' );
+		$podcasticons = '<p><strong>Subscribe via Podcast apps or RSS</strong></p>
+		<a href="http://bit.ly/2KrgJKw" title="Subscribe via Overcast">
+		<img src="https://gutenbergtimes.com/wp-content/uploads/2019/11/overcast-podcast-logo-0011.png" alt="Overcast Podcast App Logo" width="70" height="70"></a>
+
+		<a href="https://spoti.fi/2IYsOqz" title="Subscribe via Spotify">
+		<img src="https://gutenbergtimes.com/wp-content/uploads/2019/11/spotify.jpg" alt="Spotify Podcast App Logo" width="70" height="70"></a>
+
+		<a href="http://bit.ly/2xmNh1n" title="Subscribe via Google Play">
+		<img src="https://gutenbergtimes.com/wp-content/uploads/2019/11/google-play-podcast-logo-001.jpg" alt="Google Play Store Logo" width="70" height="70"></a>
+
+		<a href="http://bit.ly/2ZZiC6F" title="Subscribe via Stitcher">
+		<img src="https://gutenbergtimes.com/wp-content/uploads/2019/11/stitcher-logo-podcast-001.png" alt="Podcast App Logo" width="70" height="70"></a>
+
+		<a href="https://apple.co/2Xece9H" title="Subscribe via iTunes">
+		<img src="https://gutenbergtimes.com/wp-content/uploads/2019/11/itunes-podcast-logo-001.jpg" alt="Podcast App Logo" width="70" height="70"></a>
+
+		<a href="https://gutenbergtimes.com/podcast/feed" title="Subscribe via RSS Feed">
+		<img src="
+		https://gutenbergtimes.com/wp-content/uploads/2019/11/rssfeed.jpg" alt="PodcastRSS" width="70" height="70"></a>
+		<p style="font-size:0.8em;"><i>Scroll to get the latest episodes</i></p>';
+		
 		do_action( 'eksell_before_archive_header' );
 		
 		if ( $archive_title || $archive_description || ( eksell_show_home_filter() ) ) : 
